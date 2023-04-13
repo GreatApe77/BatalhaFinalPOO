@@ -19,9 +19,25 @@ public abstract class Personagem implements Movimentos {
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
         pontosDeVidaAtuais = pontosDeVidaAtuais -10;
+        alvo.setPontosDeVida(pontosDeVidaAtuais);
 
     }
-    public  abstract void golpearMedio(Personagem alvo);
-    public abstract void golpearForte(Personagem alvo);
+    public void golpearMedio(Personagem alvo){
+        int pontosDeVidaAtuais = alvo.getPontosDeVida();
+
+        pontosDeVidaAtuais = pontosDeVidaAtuais -20;
+
+        alvo.setPontosDeVida(pontosDeVidaAtuais);
+
+    }
+
+    public void golpearForte(Personagem alvo){
+
+        int pontosDeVidaAtuais = alvo.getPontosDeVida();
+
+        pontosDeVidaAtuais = pontosDeVidaAtuais -40;
+
+        alvo.setPontosDeVida(pontosDeVidaAtuais);
+    }
 
 }
