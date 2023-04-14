@@ -1,12 +1,16 @@
-public class MuqueMan extends Personagem {
+public class MuqueMan extends Personagem implements Atacavel {
     
 
+    @Override
+    public void golpearFraco(Personagem alvo){
+        
+        int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
-    public void chute(Personagem alvo){
-        this.golpearFraco(alvo);
-        System.out.println("Muque Man usou o Chute");
+        pontosDeVidaAtuais = pontosDeVidaAtuais -10;
+        alvo.setPontosDeVida(pontosDeVidaAtuais);
+        System.out.println("Muque Man usou o chute!");
+
     }
-
 
 
 

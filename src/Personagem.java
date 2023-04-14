@@ -1,4 +1,4 @@
-public abstract class Personagem implements Movimentos {
+public abstract class Personagem  {
     
     private int pontosDeVida = 200;
 
@@ -14,6 +14,8 @@ public abstract class Personagem implements Movimentos {
         this.pontosDeVida = pontosDeVida;
     }
     
+
+    //classes filhas vao dar override nesses metodos abaixo
     public void golpearFraco(Personagem alvo){
         
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
