@@ -29,12 +29,17 @@ public class MuqueMan extends Personagem implements Atacavel {
 
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
-        pontosDeVidaAtuais = pontosDeVidaAtuais -40;
+        pontosDeVidaAtuais -= 40;
 
         alvo.setPontosDeVida(pontosDeVidaAtuais);
         System.out.println("Muque man usou o Berserker!");
     }
 
 
+    //Habilidade unica de Muque Man
+    public void regenerarVida(){
+        int pontosDeVidaAtuais = this.getPontosDeVida();
+        pontosDeVidaAtuais += 5;
+    }
 
 }
