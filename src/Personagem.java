@@ -1,10 +1,11 @@
 public abstract class Personagem  {
     
     private int pontosDeVida = 200;
-
- 
-
-
+    private int danoContinuo = 0;
+    
+    public void setDanoContinuo(){
+        danoContinuo = 3;
+    }
 
     public int getPontosDeVida(){
         return this.pontosDeVida;
@@ -15,12 +16,12 @@ public abstract class Personagem  {
     }
     
 
-    //classes filhas vao dar override nesses metodos abaixo
+    // classes filhas vao dar override nesses metodos abaixo
     public void golpearFraco(Personagem alvo){
         
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
-        pontosDeVidaAtuais = pontosDeVidaAtuais -10;
+        pontosDeVidaAtuais = pontosDeVidaAtuais - 10;
         alvo.setPontosDeVida(pontosDeVidaAtuais);
 
     }
@@ -42,4 +43,6 @@ public abstract class Personagem  {
         alvo.setPontosDeVida(pontosDeVidaAtuais);
     }
 
+
+    
 }

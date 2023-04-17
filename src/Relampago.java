@@ -1,7 +1,6 @@
 public class Relampago extends Personagem implements Atacavel {
     
-
-
+  
     
     @Override
     public void golpearFraco(Personagem alvo){
@@ -21,7 +20,7 @@ public class Relampago extends Personagem implements Atacavel {
         pontosDeVidaAtuais = pontosDeVidaAtuais -20;
 
         alvo.setPontosDeVida(pontosDeVidaAtuais);
-        System.out.println("Relâmpago usou Lightning Storm");
+        System.out.println("Relâmpago usou Lightning Storm");  
     }
     
     @Override
