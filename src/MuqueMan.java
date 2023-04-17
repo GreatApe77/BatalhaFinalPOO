@@ -40,6 +40,7 @@ public class MuqueMan extends Personagem implements Atacavel {
     public void regenerarVida(){
         int pontosDeVidaAtuais = this.getPontosDeVida();
         pontosDeVidaAtuais += 5;
+        setPontosDeVida(pontosDeVidaAtuais);
     }
 
 }
