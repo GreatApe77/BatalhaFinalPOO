@@ -3,12 +3,14 @@ public class App {
         MuqueMan muqueman = new MuqueMan();
         
         RaioLaser raioLaser = new RaioLaser();
-
-        raioLaser.golpearFraco(muqueman);
-        raioLaser.golpearFraco(muqueman);
-        raioLaser.golpearFraco(muqueman);
+        Relampago relampago = new Relampago();
+        Alienigena alienigena = new Alienigena();
+        relampago.golpearFraco(alienigena);
+        alienigena.golpearFraco(muqueman);
         System.out.println("Vida do muqueMan: "+muqueman.getPontosDeVida());
         System.out.println("Vida do raioLaser: "+ raioLaser.getPontosDeVida());
+        System.out.println("Vida do alienigena: "+ alienigena.getPontosDeVida());
+        System.out.println("vida da relampago: "+relampago.getPontosDeVida());
 
 
 
