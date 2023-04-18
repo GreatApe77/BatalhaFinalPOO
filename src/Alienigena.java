@@ -1,5 +1,11 @@
 public class Alienigena extends Personagem  implements Atacavel{
     
+
+    Alienigena(){
+        super("Alienigena");
+    }
+
+
     //Rival Alienígena: Split Kick, Bit Laser, Shockwave
     @Override
     public void golpearFraco(Personagem alvo){
@@ -7,7 +13,7 @@ public class Alienigena extends Personagem  implements Atacavel{
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
         pontosDeVidaAtuais = pontosDeVidaAtuais -10;
         alvo.setPontosDeVida(pontosDeVidaAtuais);
-        System.out.println("Alienigena usou o Split Kick!");
+        System.out.println("Alienigena usou o Split Kick! em" );
 
     }
     

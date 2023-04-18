@@ -1,5 +1,8 @@
 public class MuqueMan extends Personagem implements Atacavel {
     
+    MuqueMan(){
+        super("MuqueMan");
+    }
 
     @Override
     public void golpearFraco(Personagem alvo){

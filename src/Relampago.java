@@ -1,9 +1,17 @@
 public class Relampago extends Personagem implements Atacavel {
     
+
+    Relampago(){
+        super("Relampago");
+    }
+
+
     private int danoDeChoque = 3;
     
     @Override
     public void golpearFraco(Personagem alvo){
+        sofrerDanoContinuo();
+
         alvo.setDanoContinuo(danoDeChoque);
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
@@ -16,6 +24,8 @@ public class Relampago extends Personagem implements Atacavel {
     @Override
     
     public void golpearMedio(Personagem alvo){
+        sofrerDanoContinuo();
+
         alvo.setDanoContinuo(danoDeChoque);
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
@@ -28,6 +38,8 @@ public class Relampago extends Personagem implements Atacavel {
     @Override
     
     public void golpearForte(Personagem alvo){
+        sofrerDanoContinuo();
+
         alvo.setDanoContinuo(danoDeChoque);
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 

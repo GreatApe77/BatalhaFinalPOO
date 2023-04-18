@@ -1,8 +1,19 @@
+import java.lang.reflect.Constructor;
+
 public abstract class Personagem  {
     
     private int pontosDeVida = 200;
     
-    
+     Personagem(String nome){
+        setNome(nome);
+     }
+    private String nome;
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     private int danoContinuo = 0;
     public void setDanoContinuo(int danoContinuo) {
         this.danoContinuo = danoContinuo;

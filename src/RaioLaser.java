@@ -1,9 +1,13 @@
 public class RaioLaser extends Personagem implements Atacavel {
     
+    RaioLaser(){
+        super("RaioLaser");
+    }
     private int boostDeAtaque = 0;
 
     @Override
     public void golpearFraco(Personagem alvo){
+        sofrerDanoContinuo();
 
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
@@ -18,6 +22,8 @@ public class RaioLaser extends Personagem implements Atacavel {
     @Override
     
     public void golpearMedio(Personagem alvo){
+        sofrerDanoContinuo();
+
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
         pontosDeVidaAtuais = pontosDeVidaAtuais -20 - boostDeAtaque;
@@ -30,6 +36,8 @@ public class RaioLaser extends Personagem implements Atacavel {
     @Override
     
     public void golpearForte(Personagem alvo){
+        sofrerDanoContinuo();
+
 
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
