@@ -35,11 +35,5 @@ public class Alienigena extends Personagem  implements Atacavel{
         System.out.println("Alienígena usou o Shockwave!");
     }
 
-    public void sofrerDanoContinuo(){
-        int meusPontosDeVida = this.getPontosDeVida();
-        
-        meusPontosDeVida -= this.getDanoContinuo();
-        
-        this.setPontosDeVida(meusPontosDeVida);
-    }
+    
 }

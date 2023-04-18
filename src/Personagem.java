@@ -48,6 +48,12 @@ public abstract class Personagem  {
         alvo.setPontosDeVida(pontosDeVidaAtuais);
     }
 
-
+    public void sofrerDanoContinuo(){
+        int meusPontosDeVida = this.getPontosDeVida();
+        
+        meusPontosDeVida -= this.getDanoContinuo();
+        
+        this.setPontosDeVida(meusPontosDeVida);
+    }
     
 }
