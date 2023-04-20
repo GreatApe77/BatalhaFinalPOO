@@ -30,7 +30,7 @@ public class ElementosJogo {
         }
         
         
-         System.out.println("You Choose"+heroi.getNome());                       
+        System.out.println("You Choose"+heroi.getNome());                       
         
 
 
