@@ -6,5 +6,23 @@ public class ElementosJogo {
         } while (jogadaDado<1||  jogadaDado>6);
         return jogadaDado;
     }
-    
+
+    public void iniciarJogo(int NumeroDeRodadas,String personagemEscolhido){
+        /*
+          
+        switch (personagemEscolhido) {
+            case valu:
+                
+                break;
+        
+            default:
+                break;
+        }
+          
+         
+         */
+        
+
+    }    
+
 }
