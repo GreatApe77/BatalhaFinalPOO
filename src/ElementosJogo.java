@@ -14,29 +14,22 @@ public class ElementosJogo {
 
         switch (personagemEscolhido) {
             case "Muque-Man":
-                 heroi = new MuqueMan();
-                System.out.println("Escolheu Muque-Man");
+                heroi = new MuqueMan();
+
                 break;
             case "Relampago":
-                 heroi = new Relampago();
-                System.out.println("Escolheu Relampago");
+                heroi = new Relampago();
                 break;
             case "Raio-Laser":
-                 heroi = new RaioLaser();
-                System.out.println("Escolheu Raio-Laser");
+                heroi = new RaioLaser();
                 break;
             default:
                 return;
         }
-        
-        
-        System.out.println("You Choose"+heroi.getNome());                       
-        
+        System.out.println("==============================================");
+        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",heroi.getNome());
+        System.out.println("==============================================");
 
-
-
-
-        
     }
 
 }

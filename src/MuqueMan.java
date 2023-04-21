@@ -1,7 +1,7 @@
 public class MuqueMan extends Personagem implements Atacavel {
     
     MuqueMan(){
-        super("MuqueMan");
+        super("Muque-Man");
     }
 
     @Override
