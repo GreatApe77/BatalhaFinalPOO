@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ElementosJogo {
 
     public static int jogarDado() {
@@ -8,8 +10,10 @@ public class ElementosJogo {
         return jogadaDado;
     }
 
-    public void iniciarJogo(int NumeroDeRodadas, String personagemEscolhido) {
 
+    public Personagem escolherPersonagem(){
+        Scanner scanner = new Scanner(System.in);
+        
         Personagem heroi = null;
 
         switch (personagemEscolhido) {
@@ -24,11 +28,19 @@ public class ElementosJogo {
                 heroi = new RaioLaser();
                 break;
             default:
-                return;
+                
         }
-        System.out.println("==============================================");
+
+        return heroi;
+
+    }
+
+    public void iniciarJogo(int NumeroDeRodadas, String personagemEscolhido) {
+
+        Personagem heroi = escolherPersonagem(personagemEscolhido);
+        System.out.println("================================================================================");
         System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",heroi.getNome());
-        System.out.println("==============================================");
+        System.out.println("================================================================================");
 
     }
 

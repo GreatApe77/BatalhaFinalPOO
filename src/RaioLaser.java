@@ -1,7 +1,7 @@
 public class RaioLaser extends Personagem implements Atacavel {
     
     RaioLaser(){
-        super("RaioLaser");
+        super("Raio-Laser");
     }
     private int boostDeAtaque = 0;
 
