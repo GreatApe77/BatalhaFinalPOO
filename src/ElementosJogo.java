@@ -44,6 +44,10 @@ public class ElementosJogo {
         Personagem inimigo = criarInimigo();
 
         rodada(heroiEscolhido, inimigo);
+        
+
+        System.out.println("Vida do heroi: "+heroiEscolhido.getPontosDeVida());
+        System.out.println("Vida do inimigo: "+inimigo.getPontosDeVida());
 
     }
 
@@ -74,8 +78,34 @@ public class ElementosJogo {
         
         int dadoDoJogador = ElementosJogo.jogarDado();
         int dadoDoInimigo = ElementosJogo.jogarDado();
-        System.out.println("Dado do heroi: "+dadoDoJogador);
-        System.out.println("Dado do inimigo: "+dadoDoInimigo);
+        
+
+
+
+
+        //Atacar Com o Heroi
+
+        if(dadoDoJogador==1||dadoDoJogador==2){
+            heroi.golpearFraco(inimigo);
+        }else if(dadoDoJogador==3||dadoDoJogador==4||dadoDoJogador==5){
+            heroi.golpearMedio(inimigo);
+        }else if(dadoDoJogador==6){
+            heroi.golpearForte(inimigo);
+        }
+
+        //Atacar com o o vilao
+
+        if(dadoDoInimigo==1||dadoDoInimigo==2){
+            inimigo.golpearFraco(heroi);
+        }else if(dadoDoInimigo==3||dadoDoInimigo==4||dadoDoInimigo==5){
+            inimigo.golpearMedio(heroi);
+        }else if(dadoDoInimigo==6){
+            inimigo.golpearForte(heroi);
+        }
+
+
+
+
     }
 
 }
