@@ -41,6 +41,10 @@ public class ElementosJogo {
 
         apresentarJogo(heroiEscolhido.getNome());
 
+        Personagem inimigo = criarInimigo();
+
+        rodada(heroiEscolhido, inimigo);
+
     }
 
     private void mostrarMenu() {
@@ -60,6 +64,18 @@ public class ElementosJogo {
         System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",nomePersonagemEscolhido);
         System.out.println("================================================================================");
 
+    }
+    
+    private Alienigena criarInimigo(){
+        return new Alienigena();
+    }
+
+    private void rodada(Personagem heroi,Personagem inimigo){
+        
+        int dadoDoJogador = ElementosJogo.jogarDado();
+        int dadoDoInimigo = ElementosJogo.jogarDado();
+        System.out.println("Dado do heroi: "+dadoDoJogador);
+        System.out.println("Dado do inimigo: "+dadoDoInimigo);
     }
 
 }
