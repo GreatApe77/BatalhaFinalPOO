@@ -10,36 +10,54 @@ public class ElementosJogo {
         return jogadaDado;
     }
 
-
-    public Personagem escolherPersonagem(){
+    public Personagem escolherPersonagem() {
         Scanner scanner = new Scanner(System.in);
-        
-        Personagem heroi = null;
+        int opcaoEscolhida;
 
-        switch (personagemEscolhido) {
-            case "Muque-Man":
-                heroi = new MuqueMan();
+        do {
+            mostrarMenu();
+            opcaoEscolhida = scanner.nextInt();
+        } while (opcaoEscolhida  >3 ||opcaoEscolhida <1);
 
-                break;
-            case "Relampago":
-                heroi = new Relampago();
-                break;
-            case "Raio-Laser":
-                heroi = new RaioLaser();
-                break;
+        switch (opcaoEscolhida) {
+            case 1:
+                return new MuqueMan();
+
+            case 2:
+                return new Relampago();
+
+            case 3:
+                return new RaioLaser();
             default:
-                
-        }
+                return null;
 
-        return heroi;
+        }
 
     }
 
-    public void iniciarJogo(int NumeroDeRodadas, String personagemEscolhido) {
+    public void iniciarJogo() {
+        
+        Personagem heroiEscolhido = escolherPersonagem();
 
-        Personagem heroi = escolherPersonagem(personagemEscolhido);
+        apresentarJogo(heroiEscolhido.getNome());
+
+    }
+
+    private void mostrarMenu() {
+        System.out.println("--------Batalha Final--------");
         System.out.println("================================================================================");
-        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",heroi.getNome());
+        System.out.println("Escolha entre : Muque-Man,Relampago e Raio-Laser!");
+        System.out.println("(1)-------> Muque-Man");
+        System.out.println("(2)-------> Relampago");
+        System.out.println("(3)-------> Raio-Laser");
+        System.out.println("================================================================================");
+        System.out.println("Digite abaixo sua escolha e aperte ENTER! :");
+
+    }
+
+    private void apresentarJogo(String nomePersonagemEscolhido){
+        System.out.println("================================================================================");
+        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",nomePersonagemEscolhido);
         System.out.println("================================================================================");
 
     }
