@@ -39,7 +39,7 @@ public class ElementosJogo {
         
         Personagem heroiEscolhido = escolherPersonagem();
 
-        apresentarJogo(heroiEscolhido.getNome());
+        apresentarJogo(heroiEscolhido);
 
         Personagem inimigo = criarInimigo();
 
@@ -70,6 +70,12 @@ public class ElementosJogo {
 
     }
     
+    private void apresentarJogo(Personagem nomePersonagemEscolhido){
+        System.out.println("================================================================================");
+        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",nomePersonagemEscolhido.getNome());
+        System.out.println("================================================================================");
+
+    }
     private Alienigena criarInimigo(){
         return new Alienigena();
     }
