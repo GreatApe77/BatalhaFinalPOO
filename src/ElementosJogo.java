@@ -9,7 +9,13 @@ public class ElementosJogo {
         } while (jogadaDado < 1 || jogadaDado > 6);
         return jogadaDado;
     }
-
+    public static void esperar(int tempoEmSegundos){
+        try {
+            Thread.sleep(tempoEmSegundos*1000); 
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
     public Personagem escolherPersonagem() {
         Scanner scanner = new Scanner(System.in);
         int opcaoEscolhida;
@@ -126,7 +132,7 @@ public class ElementosJogo {
 
 
         //Atacar Com o Heroi
-
+        esperar(3);
         if(dadoDoJogador==1||dadoDoJogador==2){
             heroi.golpearFraco(inimigo);
         }else if(dadoDoJogador==3||dadoDoJogador==4||dadoDoJogador==5){
@@ -134,7 +140,7 @@ public class ElementosJogo {
         }else if(dadoDoJogador==6){
             heroi.golpearForte(inimigo);
         }
-
+        esperar(3);
         //Atacar com o o vilao
 
         if(dadoDoInimigo==1||dadoDoInimigo==2){
