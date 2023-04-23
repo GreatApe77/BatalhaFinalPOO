@@ -4,7 +4,7 @@ public class App {
 
         ElementosJogo jogo = new ElementosJogo();
 
-        jogo.iniciarJogo();
+        jogo.iniciarJogo(6);
 
     }
 }

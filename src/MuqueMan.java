@@ -7,7 +7,7 @@ public class MuqueMan extends Personagem implements Atacavel {
     @Override
     public void golpearFraco(Personagem alvo){
         sofrerDanoContinuo();
-
+        regenerarVida();
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
         pontosDeVidaAtuais = pontosDeVidaAtuais -10;
         alvo.setPontosDeVida(pontosDeVidaAtuais);
@@ -19,6 +19,7 @@ public class MuqueMan extends Personagem implements Atacavel {
     
     public void golpearMedio(Personagem alvo){
         sofrerDanoContinuo();
+        regenerarVida();
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
         pontosDeVidaAtuais = pontosDeVidaAtuais -20;
@@ -31,6 +32,7 @@ public class MuqueMan extends Personagem implements Atacavel {
     
     public void golpearForte(Personagem alvo){
         sofrerDanoContinuo();
+        regenerarVida();
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
         pontosDeVidaAtuais -= 40;

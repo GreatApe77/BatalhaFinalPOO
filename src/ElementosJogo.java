@@ -35,15 +35,50 @@ public class ElementosJogo {
 
     }
 
-    public void iniciarJogo() {
-        
+    public void iniciarJogo(int numeroDeRodadas) {
+        //menu de escolha de personagens
         Personagem heroiEscolhido = escolherPersonagem();
-
+        //tela de apresentacao 
         apresentarJogo(heroiEscolhido);
-
+        //cria o inimigo
         Personagem inimigo = criarInimigo();
 
-        rodada(heroiEscolhido, inimigo);
+
+        for (int i = 0; i < numeroDeRodadas; i++) {
+            rodada(heroiEscolhido, inimigo);
+            
+        }
+        
+        if(heroiEscolhido.getPontosDeVida() > inimigo.getPontosDeVida()){
+            System.out.println("--------------------");
+            System.out.printf("%s conseguiu salvar a terra de ZORG! O mundo esta em paz\n",heroiEscolhido.getNome());
+            System.out.println("--------------------");
+        }else{
+            System.out.println("--------------------");
+            System.out.println("Voce Perdeu! ZORG estabeleceu um império maligno e todos foram escravizados!");
+            System.out.println("--------------------");
+
+        }
+        
+
+        System.out.println("Vida do heroi: "+heroiEscolhido.getPontosDeVida());
+        System.out.println("Vida do inimigo: "+inimigo.getPontosDeVida());
+
+    }
+    
+    public void iniciarJogo() {
+        //menu de escolha de personagens
+        Personagem heroiEscolhido = escolherPersonagem();
+        //tela de apresentacao 
+        apresentarJogo(heroiEscolhido);
+        //cria o inimigo
+        Personagem inimigo = criarInimigo();
+
+
+        for (int i = 0; i < 6; i++) {
+            rodada(heroiEscolhido, inimigo);
+        }
+        
         
 
         System.out.println("Vida do heroi: "+heroiEscolhido.getPontosDeVida());
@@ -70,9 +105,9 @@ public class ElementosJogo {
 
     }
     
-    private void apresentarJogo(Personagem nomePersonagemEscolhido){
+    private void apresentarJogo(Personagem personagemEscolhido){
         System.out.println("================================================================================");
-        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",nomePersonagemEscolhido.getNome());
+        System.out.printf("A nave de ZORG pousou! a terra está em perigo e apenas %s pode salvar o dia! \n",personagemEscolhido.getNome());
         System.out.println("================================================================================");
 
     }
@@ -83,6 +118,7 @@ public class ElementosJogo {
     private void rodada(Personagem heroi,Personagem inimigo){
         
         int dadoDoJogador = ElementosJogo.jogarDado();
+        
         int dadoDoInimigo = ElementosJogo.jogarDado();
         
 
@@ -109,7 +145,7 @@ public class ElementosJogo {
             inimigo.golpearForte(heroi);
         }
 
-
+        
 
 
     }

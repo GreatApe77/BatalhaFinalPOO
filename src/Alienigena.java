@@ -2,7 +2,7 @@ public class Alienigena extends Personagem  implements Atacavel{
     
 
     Alienigena(){
-        super("Alienigena");
+        super("ZORG");
     }
 
 
@@ -13,7 +13,7 @@ public class Alienigena extends Personagem  implements Atacavel{
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
         pontosDeVidaAtuais = pontosDeVidaAtuais -10;
         alvo.setPontosDeVida(pontosDeVidaAtuais);
-        System.out.println("Alienigena usou o Split Kick! em" );
+        System.out.println("Alienigena usou o Split Kick!" );
 
     }
     
