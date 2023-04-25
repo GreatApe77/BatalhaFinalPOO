@@ -16,6 +16,13 @@ public class ElementosJogo {
             Thread.currentThread().interrupt();
         }
     }
+    public static void esperar(){
+        try {
+            Thread.sleep(6000); 
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
     public Personagem escolherPersonagem() {
         Scanner scanner = new Scanner(System.in);
         int opcaoEscolhida;
