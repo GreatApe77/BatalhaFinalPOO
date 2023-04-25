@@ -41,7 +41,7 @@ public class RaioLaser extends Personagem implements Atacavel {
 
         int pontosDeVidaAtuais = alvo.getPontosDeVida();
 
-        pontosDeVidaAtuais = pontosDeVidaAtuais -40;
+        pontosDeVidaAtuais = pontosDeVidaAtuais -40 -boostDeAtaque;
 
         alvo.setPontosDeVida(pontosDeVidaAtuais);
         System.out.println("Raio-Laser usou Super Optic");

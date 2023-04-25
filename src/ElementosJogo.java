@@ -87,6 +87,7 @@ public class ElementosJogo {
         //cria o inimigo
         Personagem inimigo = criarInimigo();
 
+        carregar();
 
         for (int i = 0; i < 6; i++) {
             rodada(heroiEscolhido, inimigo);
@@ -130,26 +131,44 @@ public class ElementosJogo {
 
     private void rodada(Personagem heroi,Personagem inimigo){
         
-        int dadoDoJogador = ElementosJogo.jogarDado();
+        int dadoDoJogador;
         
-        int dadoDoInimigo = ElementosJogo.jogarDado();
+        int dadoDoInimigo;
         
 
 
+
+        Scanner scanner = new Scanner(System.in);
+        String botaoApertado;
+        do {
+            
+            System.out.println("=============");
+            System.out.println("APERTE (J) PARA JOGAR O DADO" );
+            System.out.println("=============");
+            botaoApertado = scanner.nextLine();
+            dadoDoJogador = ElementosJogo.jogarDado();
+        } while (!botaoApertado.toLowerCase().equals("j"));
+
+        
+        carregar();
 
 
         //Atacar Com o Heroi
-        esperar(3);
+        
         if(dadoDoJogador==1||dadoDoJogador==2){
+            System.out.println("Voce tirou "+dadoDoJogador+"!");
             heroi.golpearFraco(inimigo);
         }else if(dadoDoJogador==3||dadoDoJogador==4||dadoDoJogador==5){
+            System.out.println("Voce tirou "+dadoDoJogador+"!");
             heroi.golpearMedio(inimigo);
         }else if(dadoDoJogador==6){
+            System.out.println("Voce tirou "+dadoDoJogador+"!");
             heroi.golpearForte(inimigo);
         }
-        esperar(3);
+        
+        carregar();
         //Atacar com o o vilao
-
+        dadoDoInimigo = ElementosJogo.jogarDado();
         if(dadoDoInimigo==1||dadoDoInimigo==2){
             inimigo.golpearFraco(heroi);
         }else if(dadoDoInimigo==3||dadoDoInimigo==4||dadoDoInimigo==5){
@@ -158,9 +177,28 @@ public class ElementosJogo {
             inimigo.golpearForte(heroi);
         }
 
-        
+        carregar();
 
+        
+        
+        exibirVidaPosRound(heroi, inimigo);
 
     }
 
+    public static void carregar(){
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.println(".");
+            esperar(1);
+            
+        }
+    }
+
+    public void exibirVidaPosRound(Personagem heroi,Personagem inimigo){
+
+        System.out.printf("Vida do %s : %d\n",heroi.getNome(),heroi.getPontosDeVida());
+
+        System.out.printf("Vida do %s : %d\n",inimigo.getNome(),inimigo.getPontosDeVida());
+        
+    }
 }
