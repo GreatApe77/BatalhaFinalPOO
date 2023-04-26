@@ -170,10 +170,15 @@ public class ElementosJogo {
         //Atacar com o o vilao
         dadoDoInimigo = ElementosJogo.jogarDado();
         if(dadoDoInimigo==1||dadoDoInimigo==2){
+            System.out.println("ZORG tirou: "+dadoDoInimigo+"!");
             inimigo.golpearFraco(heroi);
         }else if(dadoDoInimigo==3||dadoDoInimigo==4||dadoDoInimigo==5){
+            System.out.println("ZORG tirou: "+dadoDoInimigo+"!");
+
             inimigo.golpearMedio(heroi);
         }else if(dadoDoInimigo==6){
+            System.out.println("ZORG tirou: "+dadoDoInimigo+"!");
+
             inimigo.golpearForte(heroi);
         }
 
