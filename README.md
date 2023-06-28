@@ -45,4 +45,4 @@ cada rodada, o oponente recebe + 3 de dano.
 <p>Rival Alienígena: Split Kick, Bit Laser, Shockwave</p>
 <hr>
 <p><strong>Nome do Aluno:</strong> Mateus Arruda Navarro Albuquerque  </p>
-<p><strong>Matricula:</strong>2210356</p>
+<p><strong>Matricula:</strong></p>
